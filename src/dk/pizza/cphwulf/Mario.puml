@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+:Alonso : as Booker
+:Mario : as Owner
+(Show menu) as (Show)
+(Get customer choice) as (Use)
+(Get customer phone) as (Phone)
+(Create Order with TimeStamp ) as (Order)
+(List running orders) as (List)
+(Remove pizza from running orders) as (Remov)
+(List all todays orders) as (Prod)
+
+
+'''note right of Admin : This is an example.
+'''note right of Admin : This is an example.
+
+note right of (Show)
+As booker I would like to show a complete menu
+to the customer so that he/she can pick one or more
+numbers from the card
+end note
+note right of (Use)
+As booker I would like to show a complete menu
+to the customer so that he/she can pick one or more
+numbers from the card
+end note
+
+note "This note is connected\nto several objects." as N2
+(Booker) .. (Show)
+(Booker) .. (Use)
+(Booker) .. (List)
+(Booker) .. (Remov)
+(Booker) .. (Phone)
+(Booker) .. (Order)
+(Owner) .. (Prod)
+@enduml
